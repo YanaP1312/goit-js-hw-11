@@ -6,7 +6,7 @@ export function createGallery(images) {
         `<li class="gallery-item">
       <a class="gallery-link" href="${image.largeImageURL}">
         <img src="${image.webformatURL}"
-        alt="${image.tags}" />
+        alt="${image.tags}"/>
         </a>
         <div class="descr-list">
         <div class="descr-item">
