@@ -14,6 +14,15 @@ form.addEventListener('submit', searchImg);
 function searchImg(event) {
   event.preventDefault();
   const query = event.target.elements.image.value.trim();
+  if (!query) {
+    iziToast.warning({
+      message: 'Warning! The form is empty, please fill searching form.',
+      position: 'topRight',
+    });
+    form.reset();
+    return;
+  }
+
   clearGallery();
   form.reset();
 
