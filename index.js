@@ -1,7 +1,7 @@
 import{i as l,S as u}from"./assets/vendor-5ObWk2rO.js";(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))e(r);new MutationObserver(r=>{for(const t of r)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&e(i)}).observe(document,{childList:!0,subtree:!0});function s(r){const t={};return r.integrity&&(t.integrity=r.integrity),r.referrerPolicy&&(t.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?t.credentials="include":r.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function e(r){if(r.ep)return;r.ep=!0;const t=s(r);fetch(r.href,t)}})();function d(o){const s=`https://pixabay.com/api/?${new URLSearchParams({key:"47110078-1dfbe4a00d7fe250476d6992f",q:o,image_type:"photo",orientation:"horizontal",safesearch:!0})}`;return fetch(s).then(e=>{if(!e.ok)throw new Error(e.status);return e.json()})}function f(o){const a=document.querySelector(".gallery"),s=o.map(e=>`<li class="gallery-item">
       <a class="gallery-link" href="${e.largeImageURL}">
         <img src="${e.webformatURL}"
-        alt="${e.tags}" />
+        alt="${e.tags}"/>
         </a>
         <div class="descr-list">
         <div class="descr-item">
